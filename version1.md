@@ -84,6 +84,17 @@ Choosing a concrete function $h$ to instantiate an oracle requires significant c
 
 **MD5 Compression Function:** as a replacement to avoid the structural problem mentioned above also fails as a good replacement due to the possibility of efficiently finding collisions, as demonstrated by prior research[^4].
 
+#### Suitable Candidates for Instantiation
+
+Although standard hash functions (as above) are to structured to make good random oracle, the authors suggest several candidate construction methods for instantiating random oracles:
+
+1. **Truncated Hash Functions:** Using a hash function with its output truncated or folded in some manner. For example, $h_1(x)$ could be the first 64 bits of MD5($x$).
+2. **Restricted Input Length:** Using a hash function with restricted input lengths. For example, $h_2(x)$ could be MD5($x$), where $|x| < 400$.
+3. **Nonstandard Usage:** Using a hash function in a nonstandard way. For example, $h_3(x)$ could be MD5($x || x$), where $x$ is a fixed string.
+4. **First Block Compression Function:** Using the "first block compression function" of a cryptographic hash function. For example, $h_4$ could be the compression of the first 512-bit block when MD5($x$) is computed.
+
+
+
 
 
 [^1]: BELLARE, M., AND ROGAWAY, P. "Random Oracles are Practical: A Paradigm for Designing Efficient Protocols." In Proceedings of the 1st ACM conference on Computer and communications security (CCS '93). https://doi.org/10.1145/168588.168596
