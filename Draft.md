@@ -79,7 +79,7 @@ Section 6 of the paper on "Random Oracles" focuses on the instantiation of rando
    - What matters is the number of oracles used and their input/output length requirements.
 
 2. **Careful Choice of Functions:**
-   - It is crucial to carefully choose a concrete function $ h $ to instantiate an oracle. 
+   - It is crucial to carefully choose a concrete function $h$ to instantiate an oracle. 
    - Some functions do not work well as replacements for random oracles, such as MD5 and its compression function, due to their inherent structure and susceptibility to attacks.
 
 ### Examples of Poor Instantiations
@@ -123,7 +123,7 @@ The last paragraph of Section 6 in the paper discusses a specific example of ins
    3. **Encoding Input:**
       - Encode each input $ x $ by $ x' $, which consists of $ x $, the bit "1", and enough "0"s to make $ |x'| $ a multiple of 128 bits.
 
-   4. **Defining Extended Function $ h $:**
+   4. **Defining Extended Function $h$:**
       - Define $ h''(x) $ as the concatenation of the outputs of $ h' $ applied to each 64-bit block of the encoded input $ x' $:
         $$
         h''(x) = h'(x_0) \| h'(x_1) \| h'(x_2) \| \ldots
