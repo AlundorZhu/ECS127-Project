@@ -48,22 +48,22 @@ A function is _non-negligible_ if it is not negligible.
 ### most things follow the convension from class  
 $A \rightarrow a$ means $A$ is a probabilistic algorithm and $a$ is its output  
 $[A(x, y, z, \dots)]$ denotes the set of all possible outputs of $A$ when run on input $x, y, z, \dots$  
-$\{0, 1\}^*$ denotes the space of finite binary strings  
-$\{0, 1\}^\infty $ denotes the space of infinite binary strings  
+$\{0, 1$^*$ denotes the space of finite binary strings  
+$\{0, 1$^\infty $ denotes the space of infinite binary strings  
 $a||b$ or $ab$ denotes the concatenation of strings $a$ and $b$  
 $\Lambda$ denotes empty string
 
 #### Oracles
-a random oracle $R$ is a map from $\{0, 1\}^*$ to $\{0, 1\}^\infty$ that is chosen uniformly at random from the set of all such maps. $2^\infty$ denotes the set of all randome oracles.  
+a random oracle $R$ is a map from $\{0, 1$^*$ to $\{0, 1$^\infty$ that is chosen uniformly at random from the set of all such maps. $2^\infty$ denotes the set of all randome oracles.  
 $R$ denotes a "generic" random oracle.  
-$G: \{0, 1\}^* \rightarrow \{0, 1\}^\infty $ denotes a random generator.  
-$H: \{0, 1\}^* \rightarrow \{0, 1\}^k$ denotes a random hash function.  
+$G: \{0, 1$^* \rightarrow \{0, 1$^\infty $ denotes a random generator.  
+$H: \{0, 1$^* \rightarrow \{0, 1$^k$ denotes a random hash function.  
 Whenever, multiple random oracles are used, they are assumed to be independently choosen.
 
 #### Trapdoor permutations
 $\mathcal{G}$ denotes a PPT algorithm and a generator for a trapdoor permutation.  
 $\mathcal{G}$ on input $1^k$ outputs a triple of algorithms $(f, f^{-1}, d)$ where $f$ is the same $f$ as seen in class and $f^{-1}$ is denoted by $g$ in class.  
-$d$ is a probabilistic output such that $[d(1^k)]$ is a subset of $\{0, 1\}^k$ and $f$, $f^{-1}$ be permutations on $[d(1^k)]$. This $d$ correspond to the $mod$ $N$ in the RSA encryption scheme as seen as an example in class.  
+$d$ is a probabilistic output such that $[d(1^k)]$ is a subset of $\{0, 1$^k$ and $f$, $f^{-1}$ be permutations on $[d(1^k)]$. This $d$ correspond to the $mod$ $N$ in the RSA encryption scheme as seen as an example in class.  
 Also, $(f, f^{-1}, d)$ is computable in polynomial time.  
 For adversary $A$, $$\epsilon(k) = Pr[(f, f^{-1}, d) \leftarrow \mathcal{G}(1^k); y \leftarrow f(x): A(f, y, d) => 1]$$ is negligible.
 
@@ -110,7 +110,7 @@ The last paragraph of Section 6 in the paper discusses a specific example of ins
 ### Example Instantiation of a Random Oracle
 
 1. **Choosing a Base Function:**
-   - The authors suggest a heuristic choice of a map $ h': \{0, 1\}^{256} \rightarrow \{0, 1\}^{64} $ defined by:
+   - The authors suggest a heuristic choice of a map $ h': \{0, 1$^{256} \rightarrow \{0, 1$^{64} $ defined by:
      $$
      h'(x) = \text{first 64 bits of } h_4((x) \oplus C)
      $$
@@ -135,4 +135,4 @@ The last paragraph of Section 6 in the paper discusses a specific example of ins
         $$
         h(x) = h''(x_0) \oplus h''(x_1) \oplus \ldots \oplus h''(x_n)
         $$
-        This construction effectively yields a map $ h: \{0, 1\}^* \rightarrow \{0, 1\}^\infty $ that behaves similarly to a random oracle for practical purposes.
+        This construction effectively yields a map $ h: \{0, 1$^* \rightarrow \{0, 1$^\infty $ that behaves similarly to a random oracle for practical purposes.
