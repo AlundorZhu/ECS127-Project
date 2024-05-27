@@ -72,6 +72,11 @@ For an adversary $A$, the probability $\epsilon(k) = Pr[(f, f^{-1}, d) \leftarro
 
 ## Instantiation
 
+The authors provide the following guidance for How does one instantiate a random oracle
+
+Note that the specific details of the target protocol, whose random oracles are being instantiated, are not of primary importance. Greater emphasis is placed on the number of oracles used and their input/output length requirements.
+
+
 
 [^1]: BELLARE, M., AND ROGAWAY, P. "Random Oracles are Practical: A Paradigm for Designing Efficient Protocols." In Proceedings of the 1st ACM conference on Computer and communications security (CCS '93). https://doi.org/10.1145/168588.168596
 
