@@ -7,7 +7,7 @@ This paper present a bridge between cryptographic theory and practice by introdu
 
 In the field of cryptography, the gap between theoretical models and practical implementations. Theorists takes certain primitives for granted and  builds schemes on top of these primitives. For example, a one-way function is considered a basic building block and more complex primitives like pseudorandom functions are built on top of it. However, in practice, powerful primitives like the Data Encryption Standard (DES) are already available and used directly as pseudorandom functions. If one needs a one-way function, it is often constructed from DES, thereby transforming a theoretically "simple" primitive into a "complex" one. This disparity results in inefficiencies and a mismatch between theoretical constructs and practical applications. 
 
-Practical primitives, not only possess desirable properties, but also have strengths which have not been defined or formalized. For instance, the MD5 hash function, denoted as $ h_2 $, with restricted input length $\leq 400$, exhibits the properties that it is hard to find an $ x $ such that $ h_2(x) = x $; that it is hard to find an $x$ such that $h_2(x)$ has Hamming weight exceeding $120$; also $f_a(x) = h_2(xa)$ is a pseudorandom function family; etc. These properties, although not fully formalized in theoretical terms, are valuable in practice.
+Practical primitives, not only possess desirable properties, but also have strengths which have not been defined or formalized. For instance, the MD5 hash function, denoted as $ h_2 $, with restricted input length $\leq 400$, exhibits the properties that it is hard to find an $ x $ such that $ h_2(x) = x $; that it is hard to find an $x$ such that $h_2(x)$ has Hamming weight exceeding $120$; also $f_a(x) = h_2(xa)$ is a pseudorandom function family; etc [^1]. These properties, although not fully formalized in theoretical terms, are valuable in practice.
 
 ### This Paper's Contribution
 
@@ -30,3 +30,5 @@ The proposed paradigm for designing efficient cryptographic protocols involves t
 ### Thesis
 
 The central thesis of this paper is that when the above method is properly carried out, the resulting protocol will be both secure and efficient. This approach provides a practical pathway to leverage the theoretical strengths of the random oracle model while addressing the efficiency needs of real-world applications. By carefully choosing and using practical primitives, cryptographic protocols can achieve the desired security properties without sacrificing performance.
+
+[^1]: M.RABIN, "Digitalized Signatures and Public-Key Functions as Intractable as Factorization," MIT Laboratory for Computer Science TR-212, 1979.
