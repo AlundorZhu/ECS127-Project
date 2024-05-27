@@ -135,4 +135,4 @@ The last paragraph of Section 6 in the paper discusses a specific example of ins
         $$
         h(x) = h''(x_0) \oplus h''(x_1) \oplus \ldots \oplus h''(x_n)
         $$
-        This construction effectively yields a map $ h: \{0, 1$^* \rightarrow \{0, 1$^\infty $ that behaves similarly to a random oracle for practical purposes.
+        This construction effectively yields a map $h: \{0, 1\}^* \rightarrow \{0, 1\}^\infty$ that behaves similarly to a random oracle for practical purposes.
