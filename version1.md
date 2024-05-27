@@ -76,8 +76,20 @@ The authors provide the following guidance for How does one instantiate a random
 
 Note that the specific details of the target protocol, whose random oracles are being instantiated, are not of primary importance. Greater emphasis is placed on the number of oracles used and their input/output length requirements.
 
+#### Importance of Careful Selection
+
+Choosing a concrete function $h$ to instantiate an oracle requires significant care. And here are some pitfalls that one should be aware of:
+
+**MD5 as an Oracle:** MD5 is not suitable because it has structural properties[^3] that allow for easy computation of certain values given an input and its MD5 hash. for any $x$, there exists a $y$ such that for any $z$, MD5($x || y || z$) can be computed easily given the length of $x$, MD5($x$), and $z$. This structure makes MD5 unsuitable as a random oracle.
+
+**MD5 Compression Function:** as a replacement to avoid the structural problem mentioned above also fails as a good replacement due to the possibility of efficiently finding collisions, as demonstrated by prior research[^4].
+
 
 
 [^1]: BELLARE, M., AND ROGAWAY, P. "Random Oracles are Practical: A Paradigm for Designing Efficient Protocols." In Proceedings of the 1st ACM conference on Computer and communications security (CCS '93). https://doi.org/10.1145/168588.168596
 
 [^2]: M.RABIN, "Digitalized Signatures and Public-Key Functions as Intractable as Factorization," MIT Laboratory for Computer Science TR-212, 1979.
+
+[^3]: G. TSUDIK, "Message Authentication with One-Way Hash Functions," IEEE INFOCOM '92, 1992.
+
+[^4]: B. DEN BOER AND A. BOSSCHE, "Collisions for the Compression Function of MD5," EUROCRYPT 93.
