@@ -93,7 +93,27 @@ Although standard hash functions (as above) are to structured to make good rando
 3. **Nonstandard Usage:** Using a hash function in a nonstandard way. For example, $h_3(x)$ could be MD5($x || x$), where $x$ is a fixed string.
 4. **First Block Compression Function:** Using the "first block compression function" of a cryptographic hash function. For example, $h_4$ could be the compression of the first 512-bit block when MD5($x$) is computed.
 
+### An Example
 
+The authors give an example of constructing a good replacement for a random oracle using a heuristic map $h'$ from $\{0, 1\}^{256} \rightarrow \{0, 1\}^{64}$ defined as the first 64 bits of $h_4((x) \oplus C)$, where $h_4$ is a function derived from a cryptographic hash function's first block compression function, and $C$ is a randomly chosen 512-bit constant.
+
+**Extending Domain and Range** to match one's needs:
+construction a map $h: \{0, 1\}^* \rightarrow \{0, 1\}^\infty$.
+
+1. You can define 
+   $$
+   h''(x) = h'(x_0\langle 0\rangle) || h'(x_1\langle 1\rangle) || h'(x_2\langle 2\rangle) || \ldots
+   $$
+   where $|x| = 224$ and $\langle i\rangle$ is the 64-bit encoding of $i$.
+2. Extends $h''$ by Encode each input $x$ by $x'$, consisting of $x$, the bit "1", and enough "0"s to make $|x'|$ a multiple of 128 bits.
+
+
+3. Finally, define $h(x)$ by combining the outputs of $h''$ using XOR:
+$$
+h(x) = h''(x_0'\langle 0\rangle) \oplus h''(x_1'\langle 1\rangle) \oplus \ldots \oplus h''(x_n'\langle n\rangle)
+$$
+
+Note that this is one way to instantiate a random oracle, there are lots of other equally valid ways to do so.
 
 
 
