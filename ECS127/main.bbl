@@ -1,0 +1,43 @@
+\begin{thebibliography}{DBB93}
+
+\bibitem[BR93]{10.1145/168588.168596}
+Mihir Bellare and Phillip Rogaway.
+\newblock Random oracles are practical: a paradigm for designing efficient protocols.
+\newblock In {\em Proceedings of the 1st ACM Conference on Computer and Communications Security}, CCS '93, page 62–73, New York, NY, USA, 1993. Association for Computing Machinery.
+
+\bibitem[DBB93]{den1993collisions}
+Bert Den~Boer and Antoon Bosselaers.
+\newblock Collisions for the compression function of md5.
+\newblock In {\em Workshop on the Theory and Application of of Cryptographic Techniques}, pages 293--304. Springer, 1993.
+
+\bibitem[DM91]{10.1145/103418.103474}
+Dwork Danny, Dolev~Cynthia and Naor Moni.
+\newblock Non-malleable cryptography.
+\newblock page 542–552, New York, NY, USA, January 1991. Association for Computing Machinery.
+
+\bibitem[MM90]{10.1145/100216.100273}
+Naor Moni and Yung Moti.
+\newblock Public-key cryptosystems provably secure against chosen ciphertext attacks.
+\newblock page 427–437, New York, NY, USA, April 1990. Association for Computing Machinery.
+
+\bibitem[NS98]{10.1145/288090.288106}
+David Naccache and Jacques Stern.
+\newblock A new public key cryptosystem based on higher residues.
+\newblock In {\em Proceedings of the 5th ACM Conference on Computer and Communications Security}, CCS '98, page 59–66, New York, NY, USA, 1998. Association for Computing Machinery.
+
+\bibitem[RS92]{10.1007/3-540-46766-1_35}
+Charles Rackoff and Daniel~R. Simon.
+\newblock Non-interactive zero-knowledge proof of knowledge and chosen ciphertext attack.
+\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --- CRYPTO '91}, pages 433--444, Berlin, Heidelberg, 1992. Springer Berlin Heidelberg.
+
+\bibitem[SS84]{10.1016/0022-0000(84)90070-9}
+Goldwasser Shafi and Micali Silvio.
+\newblock Journal of computer and system sciences.
+\newblock pages 270--299, April 1984.
+
+\bibitem[Tsu92]{10.1145/141809.141812}
+Gene Tsudik.
+\newblock Message authentication with one-way hash functions.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 22(5):29–38, oct 1992.
+
+\end{thebibliography}
